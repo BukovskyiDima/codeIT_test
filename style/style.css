@@ -2,20 +2,17 @@
 	margin: 0;
 	padding: 0;
     font-family: Arimo;
+    box-sizing: content-box;
 }
 
 body{
     position: relative;
 }
 
-p, a, h3{
-	font-family: Arimo;
-}
-
 /*logo and feedback*/
 
 .header{
-    padding: 10px 0 0 0;
+    padding: 25px 0 0 0;
 }
 
 .close{
@@ -39,12 +36,14 @@ p, a, h3{
 .phone, .feedback{
 	display: inline-block;
     vertical-align: top;
-    margin-top: 5px;
     float: right;
 }
 
 .phone{
+    margin: -3px 6px 0 0;
     list-style-type: none;
+    font-size: 18px;
+    line-height: 1.333;
 }
 
 .phone > li {
@@ -59,7 +58,7 @@ p, a, h3{
     background-color: #282c37;
     height: 35px;
     width: 120px;
-    padding: 0px 0 0 0;
+    margin: 3px 1px 0 0;
     text-align: center;
 }
 
@@ -74,20 +73,40 @@ p, a, h3{
 /*навигационное меню*/
 .navbar{
 	background-color: #282c37;
-    margin: 10px 0 0 0;
+    margin: 18px 0 0 0;
 }
 
-.navbar > ul{
+.navbar > .center{
 	list-style-type: none;
-    padding: 31px 0;
+    padding: 31px 0 30px 0;
 }
 
-.navbar > ul > li{
+.navbar > .center > li:nth-child(1){
     display: inline-block;
-    padding: 0 4.5%;
+    padding: 0 43px 0 84px;
 }
 
-.navbar > ul > li > a {
+.navbar > .center > li:nth-child(2){
+    display: inline-block;
+    padding: 0 43px;
+}
+
+.navbar > .center > li:nth-child(3){
+    display: inline-block;
+    padding: 0 39px;
+}
+
+.navbar > .center > li:nth-child(4){
+    display: inline-block;
+    padding: 0 52px 0 36px;
+}
+
+.navbar > .center > li:nth-child(5){
+    display: inline-block;
+    padding: 0 0 0 41px;
+}
+
+.navbar > .center > li > a {
     color: #ffffff;
     text-decoration: none;
 }
@@ -129,14 +148,13 @@ p, a, h3{
 .control{
     position: absolute;
     top: 95%;
-    left: 50%;
+    left: 49%;
     display: inline-block;
     list-style-type: none;
 }
 
 .control > li {
-    background-color: rgba(197,198,200,.4); 
-    border: 1px solid #ffffff;
+    background-color: rgba(197,198,200,.6);
     height: 12px;
     width: 12px;
     border-radius: 12px;
@@ -170,8 +188,29 @@ main{
 
 /*путь*/
 
+.arrow_box {
+    position: relative;
+    background: #777777;
+}
+.arrow_box:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(119, 119, 119, 0);
+    border-left-color: #777777;
+    border-width: 2px;
+    margin-top: -2px;
+}
+
+
 .way{
 	max-height: 45px;
+    margin: 11px 0 0 0;
 }
 
 .way ul{
@@ -182,13 +221,31 @@ main{
 .way > ul > li {
     list-style-type: none;
     color: #010101;
+    font-size: 14px;
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 0;
 }
 
-.way > ul > li:nth-child(even){
-    padding: 0 10px;
+.way > ul > li:nth-child(1),.way > ul > li:nth-child(2){
+    position: relative;
 }
 
-.way > ul > li:nth-child(5){
+.way > ul > li:nth-child(1):after,.way > ul > li:nth-child(2):after{
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(119, 119, 119, 0);
+    border-left-color: #777777;
+    border-width: 4px;
+    margin-top: -4px;
+}
+
+.way > ul > li:nth-child(3){
     color: #767676
 }
 /*навигационное меню*/
@@ -200,15 +257,17 @@ aside {
 }
 
 .menu{
-    list-style-type: none;	
+    list-style-type: none;
+    margin: 11px 0 0 0;
 }
 
 .menu > li{
-	padding: 10px 0;
+    padding: 10px 0 0 0;
 }
 
 .submenu{
-	padding: 10px 0 0 0;
+	padding: 10px 0 10px 15px;
+    list-style-type: initial;
 }
 
 .submenu > li{
@@ -237,6 +296,7 @@ aside {
 
 .submenu > li{
     color: #767676;
+    padding: 1px 0;
 }
 
 .submenu > li > a{
@@ -258,40 +318,43 @@ aside {
 	color: #101010;
 	border-bottom: 1px solid #101010;
 }
-.submenu{
-    padding-left: 30px;
-    list-style-type: initial;
-}
 
 .priceList{
-	margin: 60px 0 0 0;
+    margin: 66px 0 0 0;
     display: inline-block;
 }
 
-/*товар*/
+/*goods*/
 
-article{
-	max-width: 760px;
+.container{
+    overflow: hidden;
+    max-width: 800px;
+    display: inline-block;
+}
+
+.goods{
+    max-width: 800px;
     display: inline-block;
     text-align: center;
     float: right;
 }
 
 .content {
-    max-height: 365px;
-    max-width: 225px;
-    min-height: 365px;
-    min-width: 225px;
-    margin: 12px;
+    max-height: 380px;
+    max-width: 241px;
+    min-height: 380px;
+    min-width: 241px;
+    margin: 23px 0 0 25px;
     border: 1px solid #e4e4e4;
     text-align: center;
     display: inline-block;
     box-sizing: border-box;
+    float: left;
 }
 
 .contentBlock{
     position: relative;
-    min-height: 310px;
+    min-height: 324px;
 }
 
 .contentBlock > p{
@@ -319,8 +382,8 @@ article{
 
 .prise > p {
 	display: inline-block;
-	font-size: 16px;
-    padding: 17px;
+    font-size: 27px;
+    padding: 13px 0 20px 19px;
     font-weight: bold;
     color: #444444;
     float: left;
@@ -337,45 +400,51 @@ article{
     vertical-align: middle;
 }
 
-article > ul{
+.goods > ul{
 	display: inline-flex;
-	padding: 38px
+    padding: 33px 0 42px 15px;
 }
 
-article > ul > li {
+.goods > ul > li {
 	list-style-type: none;
 	padding: 0 10px
 }
 
-article > ul > li > a{
+.goods > ul > li > a{
 	text-decoration: none;
 	color: #767676;
 	font-size: 14px;
 }
 
-article > ul > li > a:hover{
+.goods > ul > li > a:hover{
 	text-decoration: none;
 	color: #101010;
 	font-size: 16px;
 }
 
-article > ul > li > a:active{
+.goods > ul > li > a:active{
 	text-decoration: none;
 	color: #101010;
 	font-size: 16px;
 }
 
-.article {
+.blog {
+    border-top: 1px solid rgb(119, 119, 119);
 	text-align: center;
-    border-top: 1px solid #777777;
 }
 
-.article > p{
+.blog > p{
     max-width: 365px;
     text-align: left;
     display: inline-flex;
     padding-top: 40px; 
     color: #767676;
+    font-size: 14px;
+    line-height: 1.571;
+}
+
+.blog > p:nth-child(1){
+    margin: 0 60px 0 0;
 }
 
 .ligth{
@@ -385,42 +454,42 @@ article > ul > li > a:active{
 
 /*footer*/
 
-footer{
+
+.footer{
     border-top: 1px solid #eaeaea;
     margin: 85px 0 0 0;
 }
 
 .copyrigth{
     display: inline-block;
-    width: 20%; 
+    width: 20%;
+    margin: 44px 0 0 0;
 }
 
 .copyrigth p {
-    color: #767676;
+    font-size: 14px;
+    color: rgb(118, 118, 118);
+    line-height: 1.429;
 }
 
 .footbar{
     display: inline-block;
     width: 75%;
     list-style-type: none;
-    padding: 31px 0;
+    padding: 43px 0;
+    float: right;
 }
 
 .footbar > li{
     display: inline-block;
-}
-
-.footbar > li:nth-child(1){
-    padding: 0 0 0 20%;
-}
-
-.footbar > li:nth-child(even){
-    padding: 0 3%;
+    margin: 0 0px 0 8.6%;
 }
 
 .footbar > li > a {
     color: #767676;
     text-decoration: none;
+    line-height: 1.2;
+    font-size: 14px;
 }
 
 .footbar > li > a:hover {
@@ -547,7 +616,24 @@ form > div > p{
     }
 }
 
+@media (max-width: 980px) {
+    .goods{
+        max-width: 620px !important;
+        display: inline-block;
+        text-align: center;
+        float: right;
+    }
+}
+
 @media (max-width: 796px) {
+
+    .goods{
+        max-width: 270px !important;
+        display: inline-block;
+        text-align: center;
+        float: right;
+    }
+
     .control{
         position: absolute;
         top: 85%;
@@ -557,7 +643,7 @@ form > div > p{
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
     .control{
         position: absolute;
         top: 80%;
@@ -566,8 +652,7 @@ form > div > p{
         list-style-type: none;
     }
 
-    header{
-        height: 200px;
+    .header{
         text-align: center;
     }
 
@@ -576,5 +661,14 @@ form > div > p{
         vertical-align: top;
         margin: 15px 20%;
          float: none;
+    }
+}
+
+@media (max-width: 450px){
+    aside {
+        min-width: 350px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
     }
 }
