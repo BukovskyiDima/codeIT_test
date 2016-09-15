@@ -1,0 +1,674 @@
+*{
+	margin: 0;
+	padding: 0;
+    font-family: Arimo;
+    box-sizing: content-box;
+}
+
+body{
+    position: relative;
+}
+
+/*logo and feedback*/
+
+.header{
+    padding: 25px 0 0 0;
+}
+
+.close{
+	display: inline-block;
+}
+
+.close > img{
+    height: 47px;
+    width: 200px;
+}
+
+.center{
+    max-width: 980px;
+    margin: auto;
+    padding: 0 10px;}
+
+.center > img{
+    text-align: left;
+}
+
+.phone, .feedback{
+	display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+
+.phone{
+    margin: -3px 6px 0 0;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 1.333;
+}
+
+.phone > li {
+    padding: 0 15px 0 0;
+}
+
+.phone > li > p{
+	color: #767676;
+}
+
+.feedback{
+    background-color: #282c37;
+    height: 35px;
+    width: 120px;
+    margin: 3px 1px 0 0;
+    text-align: center;
+}
+
+.feedback > p{
+    color: #ffffff;
+    margin: 9px 0 0 0;
+}
+
+.feedback:hover{
+    cursor: pointer;
+}
+/*навигационное меню*/
+.navbar{
+	background-color: #282c37;
+    margin: 18px 0 0 0;
+}
+
+.navbar > .center{
+	list-style-type: none;
+    padding: 31px 0 30px 0;
+}
+
+.navbar > .center > li:nth-child(1){
+    display: inline-block;
+    padding: 0 43px 0 84px;
+}
+
+.navbar > .center > li:nth-child(2){
+    display: inline-block;
+    padding: 0 43px;
+}
+
+.navbar > .center > li:nth-child(3){
+    display: inline-block;
+    padding: 0 39px;
+}
+
+.navbar > .center > li:nth-child(4){
+    display: inline-block;
+    padding: 0 52px 0 36px;
+}
+
+.navbar > .center > li:nth-child(5){
+    display: inline-block;
+    padding: 0 0 0 41px;
+}
+
+.navbar > .center > li > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar > ul > li > a:hover {
+    border-bottom: 1px solid #ffffff;
+}
+
+.navbar > ul > li:nth-child(even){
+    border-right: 1px solid  #424757;
+    border-left: 1px solid  #424757;
+}
+
+/*слайдер*/
+.gallery{
+    position: relative;
+}
+
+.gallery-holder{
+    overflow: hidden;
+}
+
+.list{
+    display: inline-block;
+    width: 99999999px;
+    overflow: hidden;
+
+}
+
+.list > li{
+	display: inline-block;
+    float: left;
+}
+
+.list > li > img {
+    width: 100vw;
+}
+
+.control{
+    position: absolute;
+    top: 95%;
+    left: 49%;
+    display: inline-block;
+    list-style-type: none;
+}
+
+.control > li {
+    background-color: rgba(197,198,200,.6);
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    display: inline-flex;
+}
+
+.active{
+	background-color: #ffffff; 
+    border: 1px solid #ffffff;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    display: inline-flex;
+}
+
+.control > li:hover{
+    background-color: #ffffff; 
+    border: 1px solid #ffffff;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+/*основной блок*/
+
+main{
+    overflow: hidden;
+}
+
+/*путь*/
+
+.arrow_box {
+    position: relative;
+    background: #777777;
+}
+.arrow_box:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(119, 119, 119, 0);
+    border-left-color: #777777;
+    border-width: 2px;
+    margin-top: -2px;
+}
+
+
+.way{
+	max-height: 45px;
+    margin: 11px 0 0 0;
+}
+
+.way ul{
+    display: inline-flex;
+    padding: 15px 0;
+}
+
+.way > ul > li {
+    list-style-type: none;
+    color: #010101;
+    font-size: 14px;
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 0;
+}
+
+.way > ul > li:nth-child(1),.way > ul > li:nth-child(2){
+    position: relative;
+}
+
+.way > ul > li:nth-child(1):after,.way > ul > li:nth-child(2):after{
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(119, 119, 119, 0);
+    border-left-color: #777777;
+    border-width: 4px;
+    margin-top: -4px;
+}
+
+.way > ul > li:nth-child(3){
+    color: #767676
+}
+/*навигационное меню*/
+aside {
+    max-width: 210px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.menu{
+    list-style-type: none;
+    margin: 11px 0 0 0;
+}
+
+.menu > li{
+    padding: 10px 0 0 0;
+}
+
+.submenu{
+	padding: 10px 0 10px 15px;
+    list-style-type: initial;
+}
+
+.submenu > li{
+	padding: 5px 0;
+}
+
+.menu > li > a , .menu > li > p {
+	text-decoration: none;
+	font-size: 16px;
+	color: #767676;
+}
+
+.menu > li > a:hover, .menu > li > p:hover{
+	text-decoration: none;
+	font-size: 16px;
+	color: #767676;
+	border-bottom: 1px solid #767676;
+    cursor: pointer;
+}
+
+.active {
+	text-decoration: none;
+	font-size: 16px;
+	color: #010101;
+}
+
+.submenu > li{
+    color: #767676;
+    padding: 1px 0;
+}
+
+.submenu > li > a{
+	font-size: 14px;
+	text-decoration: none;
+	color: #767676;
+}
+
+.submenu > li > a:hover{
+	font-size: 14px;
+	text-decoration: none;
+	color: #767676;
+    border-bottom: 1px solid #101010;
+}
+
+.submenu > li > a:active{
+	font-size: 14px;
+	text-decoration: none;
+	color: #101010;
+	border-bottom: 1px solid #101010;
+}
+
+.priceList{
+    margin: 66px 0 0 0;
+    display: inline-block;
+}
+
+/*goods*/
+
+.container{
+    overflow: hidden;
+    max-width: 800px;
+    display: inline-block;
+}
+
+.goods{
+    max-width: 800px;
+    display: inline-block;
+    text-align: center;
+    float: right;
+}
+
+.content {
+    max-height: 380px;
+    max-width: 241px;
+    min-height: 380px;
+    min-width: 241px;
+    margin: 23px 0 0 25px;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+}
+
+.contentBlock{
+    position: relative;
+    min-height: 324px;
+}
+
+.contentBlock > p{
+    font-size: 16px;
+    color: #767676;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    word-wrap: break-word;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contentBlock > div{
+    min-height: 210px;
+    line-height: 210px;
+}
+
+.prise {
+	border-top: 1px solid #e4e4e4;
+	max-height: 50px;
+    overflow: hidden;
+}
+
+.prise > p {
+	display: inline-block;
+    font-size: 27px;
+    padding: 13px 0 20px 19px;
+    font-weight: bold;
+    color: #444444;
+    float: left;
+}
+
+.prise > a{
+    padding: 15px;
+    float: right;
+}
+
+.contentImg{
+    max-height: 210px;
+    max-width: 210px;
+    vertical-align: middle;
+}
+
+.goods > ul{
+	display: inline-flex;
+    padding: 33px 0 42px 15px;
+}
+
+.goods > ul > li {
+	list-style-type: none;
+	padding: 0 10px
+}
+
+.goods > ul > li > a{
+	text-decoration: none;
+	color: #767676;
+	font-size: 14px;
+}
+
+.goods > ul > li > a:hover{
+	text-decoration: none;
+	color: #101010;
+	font-size: 16px;
+}
+
+.goods > ul > li > a:active{
+	text-decoration: none;
+	color: #101010;
+	font-size: 16px;
+}
+
+.blog {
+    border-top: 1px solid rgb(119, 119, 119);
+	text-align: center;
+}
+
+.blog > p{
+    max-width: 365px;
+    text-align: left;
+    display: inline-flex;
+    padding-top: 40px; 
+    color: #767676;
+    font-size: 14px;
+    line-height: 1.571;
+}
+
+.blog > p:nth-child(1){
+    margin: 0 60px 0 0;
+}
+
+.ligth{
+    color: #eaeaea;
+    margin: 85px 0 0 0;
+}
+
+/*footer*/
+
+
+.footer{
+    border-top: 1px solid #eaeaea;
+    margin: 85px 0 0 0;
+}
+
+.copyrigth{
+    display: inline-block;
+    width: 20%;
+    margin: 44px 0 0 0;
+}
+
+.copyrigth p {
+    font-size: 14px;
+    color: rgb(118, 118, 118);
+    line-height: 1.429;
+}
+
+.footbar{
+    display: inline-block;
+    width: 75%;
+    list-style-type: none;
+    padding: 43px 0;
+    float: right;
+}
+
+.footbar > li{
+    display: inline-block;
+    margin: 0 0px 0 8.6%;
+}
+
+.footbar > li > a {
+    color: #767676;
+    text-decoration: none;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+.footbar > li > a:hover {
+    border-bottom: 1px solid #767676;
+}
+
+
+/******************/
+.disable > ul{
+    display: none;
+}
+
+
+/*обратная связь */
+.feedbackBox{
+    background-color: rgba(0, 0, 0, 0.42);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.feedbackBox > div{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    height: 60%;
+    width: 25%;
+}
+
+.feedbackBox > div > .close {
+    height: 5%;
+    width: 5%;
+    top: 0;
+    left: 95%;
+    position: absolute;
+    cursor: pointer;
+}
+
+form{
+    height: 95%;
+    width: 95%;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+}
+
+.close > img {
+    height: 100%;
+    width: 100%;
+}
+
+form > h3 {
+    padding: 5% 0 0 0;
+    text-align: center;
+}
+
+form > label {
+    padding: 0 10%;
+}
+
+form > h3, form > label{
+    color: #535353;
+}
+
+input{
+    height: 7%;
+    width: 80%;
+    margin: 3% 10%;
+}
+
+#text{
+    height: 18%;
+    word-wrap: break-word;
+}
+
+form > div{
+    position: initial;
+    width: 30%;
+    height: 8%;
+    text-align: center;
+    margin: 5% auto 5% 61%;
+    background-color: #282c37;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+form > div > p{
+    color: white;
+    font-size: 14px;
+    margin: 9%;
+}
+
+.redLeb{
+    color: red;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ffffff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ffffff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ffffff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #ffffff;
+}
+
+.vision{
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .control{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        display: inline-block;
+        list-style-type: none;
+    }
+}
+
+@media (max-width: 980px) {
+    .goods{
+        max-width: 620px !important;
+        display: inline-block;
+        text-align: center;
+        float: right;
+    }
+}
+
+@media (max-width: 796px) {
+
+    .goods{
+        max-width: 270px !important;
+        display: inline-block;
+        text-align: center;
+        float: right;
+    }
+
+    .control{
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        display: inline-block;
+        list-style-type: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .control{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    .header{
+        text-align: center;
+    }
+
+    .phone, .feedback{
+        display: inline-block;
+        vertical-align: top;
+        margin: 15px 20%;
+         float: none;
+    }
+}
+
+@media (max-width: 450px){
+    aside {
+        min-width: 350px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+    }
+}
