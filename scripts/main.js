@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		butOp = doc.querySelector('.feedback'),
 		butClose = doc.querySelector('.close'),
 		butSubmit = doc.querySelector('.submit'),
-		block = doc.querySelector('.feedbackBox');
+		block = doc.querySelector('.feedback-box');
 
 	trig.addEventListener('click', function() {
 		trig.classList.toggle("disable");
