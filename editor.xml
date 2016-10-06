@@ -1,3 +1,5 @@
 <application>
-  <component name="LiveEditOptions" restartIfHotSwapFailed="true" updatePolicy="AUTO" />
+  <component name="LiveEditOptions" restartIfHotSwapFailed="true" updatePolicy="AUTO">
+    <option name="elementHighlighting" value="false" />
+  </component>
 </application>
